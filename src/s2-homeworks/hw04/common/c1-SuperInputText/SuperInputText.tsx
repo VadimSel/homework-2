@@ -30,7 +30,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         error,
         className,
         spanClassName,
-        id,
+        id, s
 
         ...restProps // все остальные пропсы попадут в объект restProps
     }
