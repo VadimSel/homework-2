@@ -1,8 +1,22 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .wrapper {
+    display: flex;
+    width: 300px;
+    gap: 25px
 }
 
 .number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.numberx {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: -60px;
 }

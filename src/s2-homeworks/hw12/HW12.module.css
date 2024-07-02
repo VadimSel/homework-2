@@ -19,5 +19,8 @@ html {
 }
 
 .select {
-
+    background-color: transparent;
+    border: 1px solid #323232;
+    height: 36px;
+    width: 171px;
 }
