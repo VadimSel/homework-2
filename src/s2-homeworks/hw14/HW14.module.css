@@ -3,5 +3,10 @@
 }
 
 .loading {
-
+    font-size: 14px;
+    color: #4D4D4D;
+    max-width: 370px;
+    display: flex;
+    justify-content: right;
+    height: 20px;
 }
