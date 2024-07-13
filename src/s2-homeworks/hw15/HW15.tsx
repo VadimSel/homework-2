@@ -46,7 +46,6 @@ const HW15 = () => {
     const [totalCount, setTotalCount] = useState(100)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
-
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
@@ -56,7 +55,7 @@ const HW15 = () => {
                 // сохранить пришедшие данные
 
                 //
-                    if (res) {
+                if (res) {
                     setTechs(res.data.techs)
                     setTotalCount(res.data.totalCount)
                 }
@@ -79,8 +78,8 @@ const HW15 = () => {
         //
         setPage(newPage)
         setCount(newCount)
-        setSearchParams({page: newPage.toString(), count: newCount.toString(), sort})
-        sendQuery({sort, page: newPage, count: newCount})
+        sendQuery({ page: newPage, count: newCount })
+        setSearchParams({ page: newPage.toString(), count: newCount.toString(), sort })
     }
 
     const onChangeSort = (newSort: string) => {
@@ -93,11 +92,11 @@ const HW15 = () => {
         // setSearchParams(
 
         //
-        setPage(1)
         setSort(newSort)
+        setPage(1)
 
-        sendQuery({sort: newSort, page: 1, count})
-        setSearchParams({page: '1', count: count.toString(), sort: newSort})
+        sendQuery({ sort: newSort, page: 1, count })
+        setSearchParams({ page: '1', count: count.toString(), sort: newSort })
     }
 
     useEffect(() => {
